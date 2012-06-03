@@ -4,6 +4,7 @@
     $(document).ready(function() {
       $("#payment-form").submit(function(event) {
         // disable the submit button to prevent repeated clicks
+        event.preventDefault();
         $('.submit-button').attr("disabled", "disabled");
     
         Stripe.createToken({
